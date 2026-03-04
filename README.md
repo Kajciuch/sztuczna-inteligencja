@@ -18,7 +18,7 @@ Każdy przedmiot ma swoją **wagę** oraz **wartość priorytetową** dla powodz
 - Dane wejściowe: listę zasobów + jednostki, rakiety i ich udźwig
 - Ograniczenia i optymalizacja: Każdy zasób jest niepodzielny i może zostać przypisany do maksymalnie jednej rakiety (model 0/1). Algorytm dąży do maksymalizacji całkowitej wartości ładunku wyniesionego na orbitę
 - Zarządzanie flotą (Multi-Knapsack): Algorytm nie skupia się na jednej rakiecie, lecz optymalizuje załadunek całej floty jednocześnie, dbając o to, by suma wag w żadnym kontenerze nie przekroczyła limitu technicznego
-- Priorytetyzacja (Heurystyka): Decyzje o załadunku podejmowane są w oparciu o gęstość wartości ($V/W$), co pozwala na efektywne wykorzystanie każdego kilograma udźwigu i zabezpieczenie najbardziej krytycznych zasobów w pierwszej kolejności.
+- Priorytetyzacja (Heurystyka): Decyzje o załadunku podejmowane są w oparciu o gęstość wartości, co pozwala na efektywne wykorzystanie każdego kilograma udźwigu i zabezpieczenie najbardziej krytycznych zasobów w pierwszej kolejności.
 - Struktura wyniku: Program generuje kompletny manifest startowy dla całej misji, dzieląc wynik na:
 
 🚀 SpaceX ANS – lista przypisanych modułów i towarów.
