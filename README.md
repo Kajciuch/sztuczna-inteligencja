@@ -1,4 +1,4 @@
-# 🚀 optymalizacja załadunku misji kosmicznych
+# 🚀 Optymalizacja załadunku misji kosmicznych
 **Optymalizacja Logistyki Orbitalnej przy użyciu problemu wielu "plecaków"**
 
 ## 🛰️ O projekcie
