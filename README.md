@@ -1,12 +1,12 @@
 # 🚀 Optymalizacja załadunku misji kosmicznych
 **Optymalizacja Logistyki Orbitalnej przy użyciu problemu wielu "plecaków"**
 
-## 🛰️ O projekcie
+## O projekcie
 Projekt przedstawia rozwiązanie problemu logistycznego polegającego na optymalnym rozmieszczeniu zasobów w rakietach transportowych lecących na Międzynarodową Stację Kosmiczną. 
 **Multiple Knapsack Problem (MKP)** – musimy zarządzać flotą wielu "plecaków" (rakiet) o różnych pojemnościach jednocześnie.
 
 
-## 🛠️ Scenariusz
+## Scenariusz
 Mamy rok 2026. Jako główny logista misji, musisz rozdysponować listę zasobów (tlen, woda, eksperymenty, części zamienne) pomiędzy trzy różne rakiety:
 1. **SpaceX ANS** (Udźwig: 6000 kg)
 2. **Kaya** (Udźwig: 4000 kg)
@@ -14,15 +14,18 @@ Mamy rok 2026. Jako główny logista misji, musisz rozdysponować listę zasobó
 
 Każdy przedmiot ma swoją **wagę** oraz **wartość priorytetową** dla powodzenia misji.
 
-## 🧠 Algorytm i Logika
-Aplikacja wykorzystuje **algorytm zachłanny** opartą na gęstości wartości:
-1. Obliczany jest stosunek wartości do wagi ($V/W$) dla każdego przedmiotu.
-2. Przedmioty są sortowane malejąco według tego współczynnika.
-3. Algorytm próbuje umieścić najcenniejsze przedmioty w rakiecie, która posiada największą dostępną rezerwę udźwigu w danym momencie.
+## Główne założenia
+- Dane wejściowe: listę zasobów + jednostki, rakiety i ich udźwig
+- Ograniczenia i optymalizacja: Każdy zasób jest niepodzielny i może zostać przypisany do maksymalnie jednej rakiety (model 0/1). Algorytm dąży do maksymalizacji całkowitej wartości ładunku wyniesionego na orbitę
+- Zarządzanie flotą (Multi-Knapsack): Algorytm nie skupia się na jednej rakiecie, lecz optymalizuje załadunek całej floty jednocześnie, dbając o to, by suma wag w żadnym kontenerze nie przekroczyła limitu technicznego
+- Priorytetyzacja (Heurystyka): Decyzje o załadunku podejmowane są w oparciu o gęstość wartości ($V/W$), co pozwala na efektywne wykorzystanie każdego kilograma udźwigu i zabezpieczenie najbardziej krytycznych zasobów w pierwszej kolejności.
+- Struktura wyniku: Program generuje kompletny manifest startowy dla całej misji, dzieląc wynik na:
 
-### Model matematyczny:
-$Maximize \sum_{j=1}^{m} \sum_{i=1}^{n} v_i x_{ij}$
+🚀 SpaceX ANS – lista przypisanych modułów i towarów.
 
-Przy zachowaniu ograniczeń:
-$\sum_{i=1}^{n} w_i x_{ij} \le W_j \quad (dla \ każdej \ rakiety \ j)$
+🚀 Kaya – lista przypisanych modułów i towarów.
+
+🚀 AI Dragon – lista przypisanych modułów i towarów.
+
+❌ Earth Storage – lista zasobów, które nie zmieściły się i muszą czekać na kolejną misję.
 
