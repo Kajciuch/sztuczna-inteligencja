@@ -1,3 +1,4 @@
+**Kaja Thiel 21310**
 # 🚀 Optymalizacja załadunku misji kosmicznych
 **Optymalizacja Logistyki Orbitalnej przy użyciu problemu wielu "plecaków"**
 
