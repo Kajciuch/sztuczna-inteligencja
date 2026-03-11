@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 import io
 
-# Dane w formie tekstowej (symulacja pliku CSV)
+# Dane w formie tekstowej 
 csv_data = """id,nazwa,kategoria,waga_kg,priorytet_wartosc
 1,Generator Tlenu Moduł A,Podtrzymywanie życia,1200,95
 2,Zbiorniki Wody Pitnej,Podtrzymywanie życia,2500,90
@@ -29,7 +29,7 @@ csv_data = """id,nazwa,kategoria,waga_kg,priorytet_wartosc
 RAKIETY = {"SpaceX ANS": 6000, "Kaya": 4000, "AI Dragon": 2500}
 
 def losuj_rozwiazanie():
-    # Odczyt danych bez pandas
+    # Odczyt danych 
     f = io.StringIO(csv_data)
     reader = csv.DictReader(f)
     przedmioty = list(reader)
